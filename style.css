@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Вирівнювання по горизонталі */
+    align-items: center; /* Вирівнювання по вертикалі */
+}
+
+body{
+    background: rgb(178,176,255);
+background: linear-gradient(326deg, rgba(178,176,255,1) 29%, rgba(255,251,55,1) 74%);
+}
+
+
+.list{
+    background-color: rgb(182, 182, 182);
+    border: solid black 3px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    margin: 10px;
+
+    p{
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    button{
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        margin: 30px;
+        cursor: pointer	;
+    }
+
+    @media (max-width: 600px) {
+        button{
+            width: 120px;
+        }
+    }
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    height: 100px;
+
+    input{
+        width: 170px;
+        border: 2px solid black;
+        padding: 2px;
+        border-radius: 5px;
+    }
+
+    button{
+        padding: 2px;
+        width: 170px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
+.hidden {
+    display: none;
+}
+
+
+
+.modal-content2 {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    height: 600px;
+
+
+    button{
+        padding: 2px;
+        width: 170px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
+
+
+
+
+ #Soop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.659);
+    display: grid;
+    align-items: center;
+    overflow: auto;
+    visibility: hidden; /* Блок прихований за замовчуванням */
+    opacity: 0; /* Прозорий за замовчуванням */
+    transition: opacity .4s, visibility .4s; /* Анімація для плавного показу/приховування */
+}
+
+.Soop_box {
+    width: 350px;
+    height: 160px;
+    padding: 55px;
+    z-index: 1;
+    background-color: rgb(179, 179, 179);
+    background-color: #EFEFEF;
+    border-radius: 18px;
+    font-size: 16px;
+    margin: auto;
+    -webkit-box-shadow: 5px 5px 11px 17px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 5px 5px 11px 17px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 5px 11px 17px rgba(0, 0, 0, 0.16);
+    transform: scale(0); /* Блок схований (зменшений) за замовчуванням */
+    transition: transform .6s; /* Анімація для масштабування */
+}
+
+#Soop.open {
+    visibility: visible; /* Блок видимий при активації */
+    opacity: 1; /* Блок непрозорий при активації */
+}
+
+#Soop.open .Soop_box {
+    transform: scale(1); /* Блок масштабується до нормального вигляду при активації */
+}

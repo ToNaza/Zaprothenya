@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запрошення</title>
+
+    <link rel="icon" href="./лист.jpg">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="list"> 
+        <p>Запрошення на Днюху</p>
+        <p> -- 28.03.25 --</p>
+        <p id="NameAdresText">Привіт ---- , запрошую тебе на днюху, ми плануємо піти в квест комнату та повеселитись на всі 100, якщо ти згоден(на) чи навпаки, вибери відповідну кнопку.</p>
+        
+        <button id="Plus" style="background-color: rgb(142, 255, 142);"> Я за!</button> <button id="Minus" style="background-color: rgb(255, 152, 152);"> Я проти</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Введіть пароль:</p>
+            <input type="password" id="passwordInput"><br>
+            <button onclick="checkPassword()">OK</button>
+        </div>
+    </div>
+    
+    <div id="Soop">
+        <div class="Soop_box">
+            <p class="text">Дякую за відповідь, якщо відповіть "я за" то через певний час я надішлю посилання в особисті.</p>
+        </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запрошення</title>
+
+    <link rel="icon" href="./лист.jpg">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <h2>Статус запрошень</h2>
+    <p data-name="Діма">Діма - Не відповів</p>
+    <p data-name="Міша">Міша - Не відповів</p>
+    <p data-name="Микита">Микита - Не відповів</p>
+    <p data-name="Вероніка">Вероніка - Не відповів</p>
+    <p data-name="Ярик">Ярик - Не відповів</p>
+    <p data-name="Максим">Максим - Не відповів</p>
+    <p data-name="Пусто">Пусто - Не відповів</p>
+    
+    <button onclick="location.href='./index.html'" >Назад</button>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Перевіряємо, чи є доступ до сторінки через правильний пароль
+      if (sessionStorage.getItem('isAuthenticated') !== 'true') {
+        location.href = "./index.html";  // Перехід на головну сторінку, якщо пароль не введено
+      }
+    
+      const invitationData = JSON.parse(localStorage.getItem('invitationData')) || {};
+      
+      const statusElements = document.querySelectorAll('p[data-name]');
+      statusElements.forEach(function(element) {
+        const name = element.getAttribute('data-name');
+        const status = invitationData[name] ? invitationData[name].status : "Не відповів";
+        element.textContent = `${name} - ${status}`;
+      });
+    });
+    </script>
+
+    
+
+
+    <script src="./script.js" defer></script>
+</body>
+</html>
