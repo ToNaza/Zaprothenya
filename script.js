@@ -29,7 +29,7 @@ function checkPassword() {
 
     if (name) {
         userResponses[password] = name; // Записуємо введений код у базу даних
-        document.getElementById("NameAdresText").innerText = `Привіт ${name}, запрошую тебе на днюху!`;
+        document.getElementById("NameAdresText").innerText = `Привіт ${name}, запрошую тебе на днюху, ми плануємо піти в квест комнату та повеселитись на всі 100, якщо ти згоден(на) чи навпаки, вибери відповідну кнопку.`;
         document.getElementById("modal").style.display = "none";
     } else {
         alert("Невірний код!");
