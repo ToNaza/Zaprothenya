@@ -1,10 +1,10 @@
 const users = {
-    "1794": "Діма",
-    "3313": "Микита",
+    "01794": "Діма",
+    "03313": "Микита",
     "1148": "Вероніка",
-    "9425": "Міша",
-    "1465": "Ярик",
-    "6367": "Максим",
+    "09425": "Міша",
+    "01465": "Ярик",
+    "06367": "Максим",
     "8525": ""
 };
 
@@ -53,3 +53,12 @@ document.getElementById("Minus").addEventListener("click", () => changeStatus("�
 document.getElementById("SoopOFF").addEventListener("click", function() {
     document.getElementById("Soop").classList.remove("open");
 });
+
+
+document.getElementById("Plus").addEventListener("click", disableButtons);
+document.getElementById("Minus").addEventListener("click", disableButtons);
+
+function disableButtons() {
+    document.getElementById("Plus").disabled = true;
+    document.getElementById("Minus").disabled = true;
+}
